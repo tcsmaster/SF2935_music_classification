@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 from sklearn.discriminant_analysis import QuadraticDiscriminantAnalysis
 from sklearn.model_selection import cross_val_score
 
@@ -17,3 +18,4 @@ print('Accuracy: %.02f, Stdev: %.02f' %(scores.mean(), scores.std()))
 
 y_pred = qda.predict(df_test)
 print(y_pred)
+np.savetxt('prediction_QDA.csv', y_pred, delimiter = ',', fmt = '%d')
