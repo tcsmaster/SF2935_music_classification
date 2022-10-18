@@ -18,3 +18,5 @@ toolz==0.11.2
 tqdm==4.64.1
 urllib3==1.26.11
 wheel==0.37.1
+optuna==3.0.3
+lightgbm==3.3.3
