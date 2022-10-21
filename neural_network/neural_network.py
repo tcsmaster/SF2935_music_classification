@@ -103,7 +103,7 @@ def model_builder(hp):
 	hp_learning_rate = hp.Choice('learning_rate', values = [1e-2, 1e-3, 1e-4])
 
 	model.compile(optimizer = Adam(learning_rate = hp_learning_rate),
-				loss = 'binary_crossentropy',   # TOD: binary classification task
+				loss = 'binary_crossentropy',   
 				metrics = ['accuracy'],
 				)
 	return model
@@ -135,7 +135,7 @@ evaluate_cv(hypertuned_model)
 
 
 
-# ---------------------------- Hypertuning ---------------------------- 
+# ---------------------------- Prediction ---------------------------- 
 # Load tuned model and start final training to predict
 
 # load json and create model
